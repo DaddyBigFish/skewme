@@ -1,4 +1,4 @@
-![image-removebg-preview__4_-removebg-preview](https://github.com/user-attachments/assets/92e745e0-4ab4-4d5f-b8cb-c871a4ba8920)
+![image-removebg-preview (5)](https://github.com/user-attachments/assets/252b8455-e144-4b32-9129-9c902bc54041)
 # skewme
 ### Automated sync. No more annoying ntpdate or faketime commands.
 
