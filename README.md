@@ -1,4 +1,5 @@
-# SKEWME - Forever synced, no more annoying NTP / Faketime commands.
+# SKEWME
+Forever synced, no more annoying NTP / Faketime commands.
 ![2 (1)](https://github.com/user-attachments/assets/e6cfda9c-2061-421a-a343-0c8d2f137866)
 
 # Description
