@@ -27,12 +27,12 @@ ntp=$(sudo ntpdate -u "$ntp_ip" 2>/dev/null | cut -d '.' -f1 | grep '-' | grep -
 rtc_sec=$(date -d "$rtc" +%s)
 ntp_sec=$(date -d "$ntp" +%s)
 diff_sec=$((ntp_sec - rtc_sec))
-offset=$((diff_sec / 3600))
+offset_min=$((diff_sec / 60))
 [[ "$offset" -ge 0 ]] && offset="+$offset" || offset="$offset"
 (
   while true; do
     base_time=$(timedatectl show -p RTCTimeUSec --value | cut -d' ' -f2-5)
-    new_time=$(date -u -d "$base_time $offset hours" '+%Y-%m-%d %H:%M:%S')
+    new_time=$(date -u -d "$base_time $offset_min minutes" '+%Y-%m-%d %H:%M:%S')
     sudo date -u -s "$new_time" 2>/dev/null
     sleep 2
   done
