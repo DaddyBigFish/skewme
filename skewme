@@ -23,7 +23,7 @@ fi
 
 ntp_ip="$1"
 rtc=$(timedatectl show -p RTCTimeUSec --value | cut -d' ' -f2-3)
-ntp=$(sudo ntpdate -u "$ntp_ip" 2>/dev/null | cut -d '.' -f1 | grep '-')
+ntp=$(sudo ntpdate -u "$ntp_ip" 2>/dev/null | cut -d '.' -f1 | grep '-' | grep -v 'time')
 rtc_sec=$(date -d "$rtc" +%s)
 ntp_sec=$(date -d "$ntp" +%s)
 diff_sec=$((ntp_sec - rtc_sec))
