@@ -21,6 +21,7 @@ if ps aux | grep -F "$script_path" | grep -v grep | grep -vw "$$" >/dev/null; th
   exit 1
 fi
 
+sudo timedatectl set-timezone UTC
 ntp_ip="$1"
 rtc=$(timedatectl show -p RTCTimeUSec --value | cut -d' ' -f2-3)
 ntp=$(sudo ntpdate -u "$ntp_ip" 2>/dev/null | cut -d '.' -f1 | grep '-' | grep -v 'time')
