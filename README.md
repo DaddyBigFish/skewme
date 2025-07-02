@@ -7,7 +7,7 @@ This was developed to solve the issue while using WSL with ntpdate commands alwa
 
 # Install
 ```
-wget https://github.com/DaddyBigFish/skewme/raw/refs/heads/main/skewme -O /usr/local/bin/skewme
+sudo wget https://github.com/DaddyBigFish/skewme/raw/refs/heads/main/skewme -O /usr/local/bin/skewme
 sudo chmod +x /usr/local/bin/skewme
 ```
 # Usage
